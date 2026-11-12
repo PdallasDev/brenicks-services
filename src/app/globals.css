@@ -1,0 +1,65 @@
+:root {
+  /* Brand palette */
+  --obsidian: #0c1117;
+  --graphite: #20252c;
+  --ivory: #f7f5f0;
+  --gold: #a88447; /* accents only */
+
+  /* Derived tints of the palette, used for secondary text and hairlines */
+  --ivory-muted: rgb(247 245 240 / 0.68);
+  --line: rgb(247 245 240 / 0.08);
+  --line-strong: rgb(168 132 71 / 0.45);
+
+  --font-display: "Urbanist Variable", "Avenir Next", system-ui, sans-serif;
+  --font-sans: "Instrument Sans Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background: var(--obsidian);
+  color: var(--ivory);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -1,0 +1,99 @@
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 6rem) clamp(1.25rem, 4vw, 2.5rem) 3rem;
+}
+
+.header {
+  max-width: 60rem;
+  margin: 0 auto clamp(2.5rem, 6vw, 4.5rem);
+  text-align: center;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.6rem + 3.8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+/* Bold/light contrast in one headline, a nod to Salesforce's headline style. */
+.heading em {
+  font-style: normal;
+  font-weight: 300;
+  color: var(--ivory-muted);
+}
+
+.lede {
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--ivory-muted);
+  max-width: 38rem;
+  margin-inline: auto;
+}
+
+/* One column on phones, two on tablets, three on laptops and up. */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.footer {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--ivory-muted);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--ivory);
+  text-underline-offset: 3px;
+}

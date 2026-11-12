@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ai-implementation",
+    "name": "AI Implementation",
+    "shortName": "AI",
+    "description": "Practical AI for growing businesses: readiness assessments, working pilots, firm-wide rollouts and ongoing AI operations. Real tools your team uses, not slideware.",
+    "startingPrice": {
+      "amount": 2000,
+      "unit": null,
+      "note": "AI Readiness Assessment · 2 weeks"
+    },
+    "url": "https://brenicks.com/ai-implementation/"
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "shortName": "Salesforce",
+    "description": "Salesforce that actually works, for businesses tired of paying for a system their team doesn't use. Org audits, clean builds and ongoing admin support.",
+    "startingPrice": {
+      "amount": 100,
+      "unit": "user",
+      "note": "Org Audit · 1 week · min 10 users"
+    },
+    "url": "https://brenicks.com/salesforce/"
+  },
+  {
+    "id": "web-design",
+    "name": "Web Design",
+    "shortName": "Web Design",
+    "description": "Bespoke websites for businesses that understand the cost of looking ordinary. Fast enough to rank, structured to scale and built to be owned by your team.",
+    "startingPrice": {
+      "amount": 500,
+      "unit": null,
+      "note": "Site Audit · 3 days · flat fee"
+    },
+    "url": "https://brenicks.com/web-design/"
+  }
+]
