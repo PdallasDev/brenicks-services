@@ -3,7 +3,7 @@
 A single Next.js page showing The Brenicks Group's three services as cards. All card content comes from a data file.
 
 - **Live:** _(https://brenicks-services.vercel.app/)_
-- **Repo:** _add your GitHub URL here_
+- **Repo:** _(https://github.com/PdallasDev/brenicks-services.git)_
 
 ## Run it
 
