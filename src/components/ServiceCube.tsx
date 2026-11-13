@@ -1,9 +1,11 @@
 import type { Service } from "@/lib/services";
+import CubeMotion from "./CubeMotion";
 import styles from "./ServiceCube.module.css";
 
 /*
  * "The Rubik's cube": an isometric 3×3 cube with one service per visible face.
- * Pure SVG, rendered on the server. Each face links to its service card.
+ * The SVG is rendered on the server; CubeMotion adds the scroll colour turns.
+ * Each face links to its service card.
  */
 
 type Point = [number, number];
@@ -59,7 +61,7 @@ export default function ServiceCube({ services }: { services: Service[] }) {
   const faces = services.slice(0, 3);
 
   return (
-    <div className={styles.wrap}>
+    <CubeMotion className={styles.wrap}>
       <svg
         className={styles.cube}
         viewBox="-92 -106 184 212"
@@ -79,6 +81,7 @@ export default function ServiceCube({ services }: { services: Service[] }) {
             >
               <g transform={matrix(face)}>
                 <rect className={styles.base} width="100" height="100" />
+                <rect className={styles.gaps} width="100" height="100" />
                 {STICKERS.map(({ x, y }) => (
                   <rect
                     key={`${x}-${y}`}
@@ -113,6 +116,6 @@ export default function ServiceCube({ services }: { services: Service[] }) {
         </g>
       </svg>
       <p className={styles.caption}>Our Rubik&rsquo;s cube: three sides, one solution.</p>
-    </div>
+    </CubeMotion>
   );
 }

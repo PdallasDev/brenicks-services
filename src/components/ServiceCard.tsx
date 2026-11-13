@@ -1,4 +1,5 @@
 import { formatPrice, type Service } from "@/lib/services";
+import TypedText from "./TypedText";
 import styles from "./ServiceCard.module.css";
 
 type Props = {
@@ -16,7 +17,7 @@ export default function ServiceCard({ service, index }: Props) {
       </span>
 
       <h2 id={headingId} className={styles.title}>
-        {service.name}
+        <TypedText text={service.name} delay={index * 250} />
       </h2>
 
       <p className={styles.description}>{service.description}</p>
